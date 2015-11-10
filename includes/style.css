@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Sistema de Área Restrita TGM HOST */
+/* Guilherme - Prolos */
+
+
+/* Geral */
+body{
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html, body
+{
+	height:100%;
+}
+/* Banner Topo */
+.container_topo{
+	height: 20% !important;
+	top: 0px;
+	background-color: #FFF !important;
+}
+.banner img{
+	margin: 40px 0 0 0;
+}
+
+.arearestrita{
+	margin: 2px;
+	padding-bottom: 5px;
+	color: #666;
+	font-size: 24px;
+	letter-spacing:4px;
+}
+
+/* Sessão Dropdown topo*/
+.dropdown-toggle{
+	text-align: right;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:visited, .dropdown-toggle:active{
+	background-color: #FFF !important;
+}
+.sessao{
+	list-style-type:none;
+}
+
+/* Menu */
+.nav-menu {
+	list-style-type:none;
+	display: inline-block;
+}
+
+.nav-menu li{
+	display: inline !important;
+	position: relative !important;
+	padding: 10px 15px !important;
+	bottom:0px !important;
+	background-color: #FFF !important;
+	font-style: none !important;
+	cursor: pointer;
+}
+
+.nav-menu li:hover{
+	color: #3f5443;
+	border-bottom: solid 3px #3f5443;
+}
+
+.menuativo, .menuativo:hover, .menuativo:visited {
+	background-color: #FFF !important;
+	color: #3a5c84 !important;
+	border-bottom: solid 3px #3a5c84 !important;
+	font-weight: bold;
+}
+
+.menu_row{
+	margin-bottom:0px !important;
+}
+
+.container_content {
+	min-height:100% !important;
+	height:auto !important;
+	height:100% !important;
+	/* Negative indent header and footer by its height */
+	margin:-20% auto -7%;
+	/* Pad bottom by header and footer height */
+	padding:20% 0 7%;
+	width: 100% !important;
+}
+.geralconteudo{
+	background-color: #f7f7f7 !important;
+	min-height:100% !important;
+	height:auto !important;
+	height:100% !important;
+}
+.content{
+	padding: auto 4%;
+	min-height:100% !important;
+	height:auto !important;
+	height:100% !important;
+}
+
+.title_content{
+	margin: 4% 0 5% 12%;
+	color: #3f5443;
+}
+/* Form */
+.help-block{ /* Texto explicativo sobre os campos */
+    visibility: hidden;
+    margin:0px !important;
+}
+
+.icone_duvida{ /* Icones clicaveis para a explicação nos campos */
+	color: #cad6cc !important;
+	margin-top: 9px !important;
+	margin-left: -20px !important;
+	cursor: pointer;
+}
+.icone_duvida:hover{
+	color: #99aa9d !important;
+}
+
+.botao_submit{
+	background-color: #3a5c84 !important;
+	border: none !important;
+	width: 200px !important;
+	margin-left: 34% !important;
+	margin-right: -100px;
+	margin-bottom: 4%;
+}
+
+.botao_submit:hover{
+	background-color: #27486F !important;
+}
+
+
+.control-label{
+	/*color: #3f5443 !important;*/
+	text-align: right !important;
+	word-wrap: normal;
+}
+
+.cointainer_footer{
+	background-color: #3a5c84;
+	height: 7%;
+	bottom: 0px !important;
+}
+.footer{
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;	
+	padding: 20px;
+}
+
+.active{
+	background-color: #f7f7f7 !important;
+}
+/*-------------------------*/
+/* Login */
+/*-------------------------*/
+.divlogin{
+	position: relative;
+	padding:15px;
+	width: 60%;
+	margin: auto auto;
+	color: #3a5c84 !important;
+	font-size: 18px;
+	
+}
+.title_login{
+	color: #3a5c84;
+	letter-spacing:4px;
+	font-weight: 4;
+	text-align: center;
+	margin-top: 34% !important;
+	margin-left: 18%;
+	padding-bottom: 13px;
+	border-bottom: solid 3px #3a5c84;
+}
+
+.divlogin .botao_submit{
+	background-color: #3a5c84;
+	border: none;
+	width: 200px !important;
+	margin: 2% 0 21% 25% !important;
+}
+
+.divlogin .botao_submit:hover{
+	background-color: #27486F;
+}
+
+#email{
+	margin-bottom: 8px;
+}
+.inputlogin{
+	width: 90% !important;
+}
+#erro{
+	position: relative;
+	padding: 7px 10px;
+	border-bottom: solid 3px #3a5c84;
+	background: rgba(58,92,132,0.4);
+	width: 71%;
+	height: 40px;
+	margin-left: 22%;
+	text-align: center;
+	visibility: hidden;
+}
+/*-------------------------*/
+/* Formulário de Orçamento */
+/*-------------------------*/
+
+.gerados span{
+	position: relative;
+    background-color: #3a5c84;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #FFF;
+    cursor: pointer;
+}
+.select_clientes{
+	color: #3a5c84;
+	font-size: 18px;
+	background-color: #FFF;
+	padding: 15px 0 10px 0;
+
+}
+.orcamentos_recentes{
+    padding: 10px 20px;
+    font-size: 18px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #FFF;
+    cursor: pointer;
+}
+.div_form_orcamento{
+	font-size: 18px;
+}
+.div_form_orcamento .control-label{
+	color: #3a5c84 !important;
+	text-align: right !important;
+}
+.nomecliente{
+
+}
+.topo_orcamento{
+	background-color: #FFF !important;
+	margin-bottom: 10px !important;
+	color: #3a5c84 !important;
+	padding: 10px !important;
+}
+/*--Listagem de orçamentos recentes--*/
+.lista_orcamento{
+	margin-right: 40px !important;
+	color: #3a5c84 !important;
+	padding: 10px !important;
+}
+.orcamento_listado{
+	background-color: #F0F !important;
+	
+}

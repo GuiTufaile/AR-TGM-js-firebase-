@@ -1,0 +1,206 @@
+<script src="includes/orcamento.js" type="text/javascript">
+	jQuery.noConflict();
+	jQuery(function($)
+	{
+	   $("#valor").mask("R$???99,99",{placeholder:" "});
+	   $("#aream").mask("???99,99 m²",{placeholder:" "});
+	});	
+
+</script>	<!-- Scripts CRUD -->
+
+<div class="container content" > <!-- Div Form -->
+	<div class="col-md-12">
+		<h1 class="title_content">
+			Formulário de Orçamento
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-4 gerados"> <!-- .GERADOS Link do total de orçamentos gerados "do Credenciado logado" -->
+			<span conclick="location.href='#'">
+				Total de orçamentos gerados: XXX
+			</span>
+		</div> <!-- \.GERADOS -->
+		<div class="col-md-8 select_clientes"><!-- .select_clientes SELECT que lista os clientes cadastrados  -->
+			<div class="row">
+				<div class="form-group">				
+				  	<div class="col-xs-4">
+						<label class="control-label" for="sl_cliente">Selecione o Cliente </label>
+					</div>
+					<div class="col-xs-8">
+						<select id="sl_cliente" name="sl_cliente" class="form-control" onchange=""><!-- Aqui no OnChange deve chamar a função ajax que traz na div "#topo_orcamento" os dados do cliente selecionado -->
+						      <option value="1">Cliente 1</option>
+						      <option value="2">Cliente 2</option>
+						      <option value="3">Cliente 3</option>				      
+					    </select>
+				  	</div>
+				</div>
+			</div>
+		</div>	<!-- \.select_clientes -->
+		<div class="col-md-4 orcamentos_recentes"><!-- .orcamentos_recentes Lista um resumo dos ultimos orçamentos feitos (com link p/ pagina do orlamento) -->
+			<div class="lista_orcamento">
+				<div class="orcamento_listado">
+					Orçamento nº <label id="num_orcamento">123</label> <!-- Deve trazer o número do orçemento no inner da #num_orcamento-->
+					- Gerado dia <label id="gerado_orcamento">123</label>
+					<br />
+
+				</div>
+			</div>
+		</div><!-- \.orcamentos_recentes -->
+		<div class="col-md-8 div_form_orcamento"><!-- .div_form_orcamento Formulário de elaboração do Orçamento -->
+			<div class="row topo_orcamento" id="topo_orcamento">
+				<div class="col-xs-4">
+					<img src="images\logo.png" alt="">
+				</div>
+				<div class="col-xs-8">
+					<label>Cliente: Nome do Cliente</label><br>
+					<label>CNPJ: 99.999.999/9999-99</label><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 ">
+					<form class="form-horizontal" id="orcamentoform" >
+					
+					<!-- Text input-->
+							<div class="form-group">
+						  	  <div class="col-xs-4">
+						  	  	<label class="control-label" for="valor">Valor por m²</label> 
+						  	  </div>
+							  <div class="col-xs-6">
+							  	<input id="valor" name="valor" type="text" placeholder="R$ 00,00" class="form-control input-md"  maxlength="5" required="">
+							  	<span class="help-block" id="valor_help" >
+							  		O Cálculo do orçamento utiliza este valor.
+							  	</span>  
+							  </div>
+							  <div class="col-xs-2">
+							  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('valor_help')"></span>
+							  </div>
+							</div>
+					
+					<!-- Text input-->
+							<div class="form-group">
+							<div class="col-xs-4">
+							  	<label class="control-label" for="aream">Área (m²)</label>  
+							</div>
+						  	<div class="col-xs-6">
+							  	<input id="aream" name="aream" type="text" placeholder="00.0 m²" class="form-control input-md"  maxlength="5" required="">
+							  	<span class="help-block" id="aream_help" >
+							  		aaaa
+							  	</span>  
+							  </div>
+							  <div class="col-xs-2">
+							  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('aream_help')"></span>
+							  </div>
+							</div>
+						
+					<!-- Multiple Radios -->
+							<div class="form-group">
+							<div class="col-xs-4" >
+						  		<label class="control-label" for="radios">Estado do Carpete</label>
+						  	</div>
+						  	<div class="col-xs-8">
+							  	<div class="radio">
+								    <label for="radios-0">
+								      <input type="radio" name="radios" id="radios-0" value="1" checked="">
+								      Ótimo
+								    </label>
+								</div>
+						  		<div class="radio">
+								    <label for="radios-1">
+								      <input type="radio" name="radios" id="radios-1" value="1" checked="checked">
+								      Bom
+								    </label>
+								</div>
+								<div class="radio">
+								    <label for="radios-2">
+								      <input type="radio" name="radios" id="radios-2" value="1" checked="">
+								      Ruim
+								    </label>
+								</div>
+						  	</div>
+							</div>
+
+						<!-- Textarea -->
+							<div class="form-group">
+								<div class="col-xs-4" >
+							  		<label class="col-md-4 control-label" for="descricao">Descrição</label>
+							  	</div>
+							  	<div class="col-xs-6">                     
+								    <textarea class="form-control" id="descricao" name="descricao" placeholder="Ex: Agendado para dia xx"></textarea>
+								  	<span class="help-block" id="descricao_help" >
+								  		Esta descrição estará presente no corpo do orçamento
+								  	</span>  
+							  	</div>
+							 	<div class="col-xs-2">
+								  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('descricao_help')"></span>
+								</div>
+							</div>
+						<!-- Button -->
+						<div class="form-group">
+						  	<div class="container">
+						    	<button id="cadastrar" name="cadastrar" class="btn btn-primary botao_submit" style="margin-top:2%;" >Finalizar</button>
+						  	</div>
+						</div>
+
+					</form>	
+				</div>
+			</div>
+			<!--
+			<div class="col-md-12">
+			<table id="example" class="display" cellspacing="0" width="100%">			        
+			        <thead>
+			            <tr>
+			                <th>Nome</th>
+			                <th>Position</th>
+			                <th>Office</th>
+			                <th>Age</th>
+			                <th>Start date</th>
+			                <th>Salary</th>
+			            </tr>
+			        </thead>
+			 
+			        <tfoot>
+			            <tr>
+			            </tr>
+			        </tfoot>
+			 
+			        <tbody>
+			            <tr>
+			                <td>Tiger Nixon</td>
+			                <td>System Architect</td>
+			                <td>Edinburgh</td>
+			                <td>61</td>
+			                <td>2011/04/25</td>
+			                <td>$320,800</td>
+			            </tr>
+			            <tr>
+			                <td>Garrett Winters</td>
+			                <td>Accountant</td>
+			                <td>Tokyo</td>
+			                <td>63</td>
+			                <td>2011/07/25</td>
+			                <td>$170,750</td>
+			            </tr>
+			            <tr>
+			                <td>Ashton Cox</td>
+			                <td>Junior Technical Author</td>
+			                <td>San Francisco</td>
+			                <td>66</td>
+			                <td>2009/01/12</td>
+			                <td>$86,000</td>
+			            </tr>
+			            <tr>
+			                <td>Cedric Kelly</td>
+			                <td>Senior Javascript Developer</td>
+			                <td>Edinburgh</td>
+			                <td>22</td>
+			                <td>2012/03/29</td>
+			                <td>$433,060</td>
+			            </tr>
+			        </tbody>
+			        
+			    </table>
+			</div>
+			-->
+		</div>	
+	</div><!-- /.ROW -->									
+</div><!-- /.container -->

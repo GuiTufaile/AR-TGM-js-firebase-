@@ -1,0 +1,198 @@
+<div class="container content" > <!-- Div Form -->
+						
+	<h1 class="title_content">
+		Cadastro de Clientes
+	</h1>
+
+		<form class="form-horizontal">
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="nomefantasia"> Nome Fantasia</label>  
+		  <div class="col-xs-6">
+		  	<input id="nomefantasia" name="nomefantasia" type="text" placeholder=" Nome Fantasia" class="form-control input-md"  maxlength="80" required="">
+		  	<span class="help-block" id="nomefantasia_help" >O Nome Fantasia ficará no topo dos orçamentos</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('nomefantasia_help')"></span>
+		  </div>
+		</div>
+		
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="razaosocial"> Razão Social</label>  
+		  <div class="col-xs-6">
+		  	<input id="razaosocial" name="razaosocial" type="text" placeholder=" Ex: Razão Social LTDA" class="form-control input-md" maxlength="80" required="">
+		  	<span class="help-block" id="razaosocial_help">Estará presente no topo dos orçamentos</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('razaosocial_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="cnpj">CNPJ</label>  
+		  <div class="col-xs-6">
+		  	<input id="cnpj" name="cnpj" type="text" placeholder="00.000.000/0000-00" class="form-control input-md" required="">
+		  	<span class="help-block" id="cnpj_help">Estará presente no topo dos orçamentos</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('cnpj_help')"></span>
+		  </div>
+		</div>
+
+		<!-- File Button --> 
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="logocredenciado" required="">Logomarca</label>
+		  <div class="col-md-4">
+		    <input id="logocredenciado" name="logocredenciado" class="input-file" type="file">
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="slogan">Slogan</label>  
+		  <div class="col-xs-6">
+		  	<input id="slogan" name="slogan" type="text" placeholder="Estratégia em limpeza" maxlength="80" class="form-control input-md">
+		  	<span class="help-block" id="slogan_help">Será o subtítulo dos orçamentos</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('slogan_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="cep">CEP</label>  
+		  <div class="col-xs-6">
+		  	<input id="cep" name="cep" type="text" placeholder="99999-999" class="form-control input-md" required="">
+		  	<span class="help-block" id="cep_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('cep_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="logradouro">Logradouro</label>  
+		  <div class="col-xs-6">
+		  	<input id="logradouro" name="logradouro" maxlength="100" type="text" placeholder="(Rua, Avenida, Rodovia, etc.)" class="form-control input-md" required="">
+		  	<span class="help-block" id="logradouro_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('logradouro_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="numero">Número</label>  
+  		<div class="col-xs-6">
+		  	<input id="numero" name="numero" type="text" placeholder="Ex: 35" class="form-control input-md" required="">
+		  	<span class="help-block" id="numero_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		</div>
+		<div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('numero_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="complemento">Complemento</label>  
+		  	<div class="col-xs-6">
+		  <input id="complemento" name="complemento" type="text" maxlength="40" placeholder="Ex: Sala 21, 2º Andar" class="form-control input-md" required="">
+		  	<span class="help-block" id="complemento_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('complemento_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="cidade">Cidade</label>  
+		  <div class="col-xs-6">
+		 	<input id="cidade" name="cidade" type="text" maxlength="80" placeholder="Ex: São Paulo" class="form-control input-md" required="">
+		  	<span class="help-block" id="cidade_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('cidade_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Select Basic -->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="estado">Estado</label>
+		  <div class="col-xs-6">
+		    <select id="estado" name="estado" class="form-control">
+		      <option value="Acre">Acre</option>
+		      <option value="Alagoas">Alagoas</option>
+		      <option value="Amazonas">Amazonas</option>
+		      <option value="Amapá">Amapá</option>
+		      <option value="Bahia">Bahia</option>
+		      <option value="Ceará">Ceará</option>
+		      <option value="Distrito Federal">Distrito Federal</option>
+		      <option value="Espírito Santo">Espírito Santo</option>
+		      <option value="Goiás">Goiás</option>
+		      <option value="Maranhão">Maranhão</option>
+		      <option value="Mato Grosso">Mato Grosso</option>
+		      <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+		      <option value="Minas Gerais">Minas Gerais</option>
+		      <option value="Pará">Pará</option>
+		      <option value="Paraíba">Paraíba</option>
+		      <option value="Paraná">Paraná</option>
+		      <option value="Pernambuco">Pernambuco</option>
+		      <option value="Piauí">Piauí</option>
+		      <option value="Rio de Janeiro">Rio de Janeiro</option>
+		      <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+		      <option value="Rondônia">Rondônia</option>
+		      <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+		      <option value="Roraima">Roraima</option>
+		      <option value="Santa Catarina">Santa Catarina</option>
+		      <option value="Sergipe">Sergipe</option>
+		      <option value="São Paulo">São Paulo</option>
+		      <option value="Tocantins">Tocantins</option>
+		    </select>
+		    	<span class="help-block" id="estado_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('estado_help')"></span>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="telefone">Telefone</label>  
+		  <div class="col-xs-6">
+		  	<input id="telefone" name="telefone" type="text" placeholder="Ex: 99999-9999" class="form-control input-md" required="">
+		  	<span class="help-block" id="telefone_help">Será utilizado na localização do mapa dos credenciados no site</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('telefone_help')"></span>
+		  </div>
+		</div>
+		
+		<!-- Text input-->
+		<div class="form-group">
+		  	<label class="col-md-4 control-label" for="email">E-mail</label>  
+		  <div class="col-xs-6">
+		  	<input id="email" name="email" type="email" placeholder="Ex: credenciado@dominio.com" maxlength="60" class="form-control input-md" required="">
+		  	<span class="help-block" id="email_help">Será o login do usuário, a senha ele atribuirá após o recebimento e confirmação do e-mail de cadastro</span>  
+		  </div>
+		  <div class="col-xs-2">
+		  	<span class="glyphicon glyphicon-question-sign icone_duvida" aria-hidden="true" onclick="mostrahelp('email_help')"></span>
+		  </div>
+		</div>		
+
+		<!-- Button -->
+		<div class="form-group">
+		  	<div class="container">
+		    	<button id="cadastrar" name="cadastrar" class="btn btn-primary botao_submit">Cadastrar</button>
+		  	</div>
+		</div>
+
+	</form>	
+</div><!-- / Div Form -->

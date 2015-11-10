@@ -1,0 +1,33 @@
+<div class="container content" > <!-- Div Form -->
+	<div class="divlogin">
+		<h1 class="title_login" style="margin-top:4%;">
+			LOGIN
+		</h1>
+		<label id="erro">Erro de Login</label>
+			<form class="form-horizontal" id="loginform" >
+			
+				<!-- Text input-->
+				<div class="form-group">
+				  	<label class="col-xs-4 control-label" for="email">E-mail</label>  
+				  <div class="col-xs-8">
+				  	<input id="email" name="email" type="email" placeholder="Ex: credenciado@dominio.com" maxlength="80" class="form-control input-md inputlogin" required="">
+				  </div>
+				</div>	
+
+				<!-- Text input-->
+				<div class="form-group">
+				  	<label class="col-xs-4 control-label" for="senha">Senha</label>  
+				  <div class="col-xs-8">
+				  	<input type="password" id="senha" name="senha" class="form-control input-md inputlogin"  maxlength="80" required="">
+				  </div>
+				</div>	
+
+				<!-- Button -->
+				<div class="form-group">
+				  	<div class="container">
+				    	<button id="btn_login" name="btn_login" class="btn btn-primary botao_submit" style="margin-top:2%;" onclick="login($('#email').val(),$('#senha').val())">Entrar</button>
+				  	</div>
+				</div>
+			</form>	
+	</div>
+</div><!-- / Div Form -->
